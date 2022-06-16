@@ -14,18 +14,22 @@ require_once "../config/bdd.php";
     <title>Page inscription</title>
 </head>
 <body>
-    <header class="headerInscription">
-    <div class="placementBtn">           
-            <a href="accueil.php"><button class="">Accueil</button></a>
-            
-            <a href="profil.php"><button class=""></button></a>
-
-            <a href="logout.php"><button class="">Déconnection</button></a>
+<header class="headerIndex">
+        <div class="Slogan">
+            <p>L'antre des Gamer</p>
+        </div>
+        <div class="navigation">
+            <a href="#"><span> Boutique </span></a>
+            <a href="#"><span> Déconnexion </span></a>
+            <a href="#"><span> Profil </span></a>
+        </div>
+        <div class="panier">
+        <a class="logoPanier" href="#"><img src="../asset/img/caddie.png" alt="" width="120%"></a>
         </div>
     </header>
     <main class="mainInscription">
         <h1>Création de compte</h1>
-        <form method="POST" action="../Models/Connexion.php" class="FormInscription">
+        <form method="POST" action="../Models/Connexion.php" class="FormInscription card">
             <table>
                 <tr>
                     <td>
@@ -37,11 +41,17 @@ require_once "../config/bdd.php";
                         <input type="password" placeholder="Mot de passe">
                     </td>
                 </tr>
+                
             </table>
-           
-            <button type="Submit">Connexion</button>
+            <a href="">Mot de passe oublié</a>
+            <button class="btnConnexion" type="Submit">Connexion</button>
            
         </form>
+        <div class="card2 card">
+            <h2>NOUVEAU CLIENT ?</h2>
+            <button>Crée un compte</button>
+        </div>
+        <p> E-gaming s'engage à garder ces informations strictement confidentielles.</p>
     </main>
     <footer>
 

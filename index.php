@@ -20,10 +20,10 @@
         <div class="navigation">
             <a href="#"><span> Boutique </span></a>
             <a href="#"><span> Déconnexion </span></a>
-            <a href="#"><span> Profil </span></a>
+            <a href="#"><span> Compte </span></a>
         </div>
         <div class="panier">
-        <a class="logoPanier" href="#"><img src="./asset/img/caddie.png" alt="" width="120%"></a>
+        <a class="logoPanier" href="#"><img src="./asset/img/caddie.png" alt="PANIER" width="120%"></a>
         </div>
     </header>
  
@@ -40,8 +40,7 @@
                    <div class="contenu">
                    <img src="./asset/img/baniere.jpg" alt="" width="50%">
                        <p> MMMMMMMMMMMMMM </p>
-                    </div>  
-                    
+                    </div>                      
                 </div>
             </div>
             <div class="container">
@@ -64,16 +63,11 @@
                 <div class="card">
                     <span>LLLLLLLLLLLLLLL</span>
                 </div>
-                <div class="card">
+                <div class=" card">
                 <span>MMMMMMMMMMMMMM</span>
                 </div>
             </div>
         </div>
-
-        
-
-
-
     </main>
     
     
