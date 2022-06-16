@@ -11,6 +11,9 @@
     <meta name="description" content="Site de vente de produits gaming professionel">
     <link rel="stylesheet" href="./asset/style.css">
     <title>Page d'accueil</title>
+
+    <script type="text/javascript" src="asset/jquery.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
     <header class="headerIndex">
@@ -19,7 +22,7 @@
         </div>
         <div class="navigation">
             <a href="#"><span> Boutique </span></a>
-            <a href="#"><span> Déconnexion </span></a>
+            <a id="bouton_deconnexion" name="bouton_deconnexion"><span> Déconnexion </span></a>
             <a href="#"><span> Compte </span></a>
         </div>
         <div class="panier">

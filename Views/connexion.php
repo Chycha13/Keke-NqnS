@@ -12,6 +12,9 @@ require_once "../config/bdd.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="../asset/style.css">
     <title>Page inscription</title>
+
+    <script type="text/javascript" src="../asset/jquery.js"></script>
+    <script type="text/javascript" src="../js/connexion.js"></script>
 </head>
 <body>
 <header class="headerIndex">
@@ -49,7 +52,7 @@ require_once "../config/bdd.php";
         </form>
         <div class="card2 card">
             <h2>NOUVEAU CLIENT ?</h2>
-            <button>Crée un compte</button>
+            <button id="bouton_inscription" name="bouton_inscription">Crée un compte</button>
         </div>
         <p> E-gaming s'engage à garder ces informations strictement confidentielles.</p>
     </main>
