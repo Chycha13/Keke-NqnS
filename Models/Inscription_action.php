@@ -26,7 +26,18 @@ if(isset($_POST['nom_user']) && isset($_POST['prenom_user']) && isset($_POST['ma
                         
                         $erreur = "une erreure c'est produite lors de l'insertion dans la base de donnée";
                     }
+                    $success = "Bienvenue dans la Lanitzerie";
+                    header("Location: connection.php?success=$success");
+                }else{
+                    $erreur = " Le mot de passe n'est pas identique";
+                    header("Location: ../Views/inscription.php?error=$erreur");
                 }
+            }else{
+                $erreur = "veuillez entrez un mail valide";
+                header("Location: ../Views/inscription.php?error=$erreur");
             }        
-        }
+        }else{
+            $erreur = "veuillez remplir les champs" ;
+            header("Location: ../Views/inscription.php?error=$erreur");
+        } 
 }        

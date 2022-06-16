@@ -13,19 +13,20 @@
     <title>Page d'accueil</title>
 </head>
 <body>
-  
-<header class="headerIndex">
+    <header class="headerIndex">
         <div class="Slogan">
-            <p class="">L'antre des Gamers</p>
+            <p>L'antre des Gamer</p>
         </div>
-        <div class=""> 
-            <a href="#"><img src="./asset/img/caddie.png" alt="Panier" width="10%"></a>
-            
-            <a href="profil.php"><button class="btnStyle"></button></a>
-
-            <a href="logout.php"><button class="btnStyle">Déconnexion</button></a>
+        <div class="navigation">
+            <a href="#"><span> Boutique </span></a>
+            <a href="#"><span> Déconnexion </span></a>
+            <a href="#"><span> Profil </span></a>
+        </div>
+        <div class="panier">
+        <a class="logoPanier" href="#"><img src="./asset/img/caddie.png" alt="" width="120%"></a>
         </div>
     </header>
+ 
     <main class="mainIndex">
         <div class="caroussel">
             <img src="./asset/img/baniere.jpg" alt="" width="50%">
@@ -33,38 +34,43 @@
         <div class="pubIndex">
             <div class="container">
                 <div class="card">
-
+                    <span>LLLLLLLLLLLLLLLL</span>
                 </div>
                 <div class="card">
-
+                   <div class="contenu">
+                   <img src="./asset/img/baniere.jpg" alt="" width="50%">
+                       <p> MMMMMMMMMMMMMM </p>
+                    </div>  
+                    
                 </div>
             </div>
             <div class="container">
                 <div class="card">
-
+                    <span>LLLLLLLLLLLLLLLL</span>
                 </div>
                 <div class="card">
-
+                <span>MMMMMMMMMMMMMM</span>
                 </div>
             </div>
             <div class="container">
                 <div class="card">
-
+                    <span>LLLLLLLLLLLLLLLL</span>
                 </div>
                 <div class="card">
-
+                <span>MMMMMMMMMMMMMM</span>
                 </div>
             </div>
             <div class="container">
                 <div class="card">
-
+                    <span>LLLLLLLLLLLLLLL</span>
                 </div>
                 <div class="card">
-
+                <span>MMMMMMMMMMMMMM</span>
                 </div>
             </div>
-
         </div>
+
+        
 
 
 
@@ -72,7 +78,5 @@
     
     
 </body>
-<footer class="footer">
-    fggfdgdfhgdfhd
-</footer>
+
 </html>
