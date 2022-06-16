@@ -25,18 +25,8 @@ require_once "../config/bdd.php";
     </header>
     <main class="mainInscription">
         <h1>Création de compte</h1>
-        <form method="POST" action="../Models/Inscription_action.php" class="FormInscription">
+        <form method="POST" action="../Models/Connexion.php" class="FormInscription">
             <table>
-                <tr>
-                    <td>
-                        <input type="text" placeholder="Nom">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" placeholder="Prénom">
-                    </td>
-                </tr>
                 <tr>
                     <td>
                         <input type="text" placeholder="Mail">
@@ -47,14 +37,10 @@ require_once "../config/bdd.php";
                         <input type="password" placeholder="Mot de passe">
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <input type="password" placeholder="Mot de passe">
-                    </td>
-                </tr>                                
-           </table>
-
-           <button type="Submit">S'inscrire</button> 
+            </table>
+           
+            <button type="Submit">Connexion</button>
+           
         </form>
     </main>
     <footer>
