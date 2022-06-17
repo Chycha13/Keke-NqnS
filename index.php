@@ -1,7 +1,11 @@
 <?php
-    require_once "./config/bdd.php"
-?>
+    require_once "./config/bdd.php";
+// $insert_name = '';
+// if(isset($_SESSION['prenom_user'])){
+//     $insert_name = $_SESSION['prenom_user'];
+// }
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,14 +24,15 @@
         <div class="Slogan">
             <p>L'antre des Gamer</p>
         </div>
+        <div class="panier">
+            <a class="logoPanier" href="#"><img src="./asset/img/caddie.png" alt="PANIER" width="120%"></a>
+        </div>
         <div class="navigation">
             <a href="#"><span> Boutique </span></a>
             <a id="bouton_deconnexion" name="bouton_deconnexion"><span> Déconnexion </span></a>
             <a href="#"><span> Compte </span></a>
         </div>
-        <div class="panier">
-        <a class="logoPanier" href="#"><img src="./asset/img/caddie.png" alt="PANIER" width="120%"></a>
-        </div>
+       
     </header>
  
     <main class="mainIndex">
@@ -72,7 +77,9 @@
             </div>
         </div>
     </main>
-    
+
+
+
     
 </body>
 

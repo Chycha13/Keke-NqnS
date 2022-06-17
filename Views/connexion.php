@@ -31,17 +31,17 @@ require_once "../config/bdd.php";
         </div>
     </header>
     <main class="mainInscription">
-        <h1>Création de compte</h1>
-        <form method="POST" action="../Models/Connexion.php" class="FormInscription card">
+        <h1 class="titreConnexion">Création de compte</h1>
+        <form method="POST" action="../Models/Connexion.php" id="formConnexion" name="formConnexion" class="FormConnexion card">
             <table>
                 <tr>
                     <td>
-                        <input type="text" placeholder="Mail">
+                        <input type="text" placeholder="Mail" id="mail_user" name="mail_user">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="password" placeholder="Mot de passe">
+                        <input type="password" placeholder="Mot de passe" id="password_user" name="password_user">
                     </td>
                 </tr>
                 
@@ -52,9 +52,9 @@ require_once "../config/bdd.php";
         </form>
         <div class="card2 card">
             <h2>NOUVEAU CLIENT ?</h2>
-            <button id="bouton_inscription" name="bouton_inscription">Crée un compte</button>
+            <button class="btnConnexion" id="bouton_inscription" name="bouton_inscription">Crée un compte</button>
         </div>
-        <p> E-gaming s'engage à garder ces informations strictement confidentielles.</p>
+        <p class="engagement"> E-gaming s'engage à garder ces informations strictement confidentielles.</p>
     </main>
     <footer>
 

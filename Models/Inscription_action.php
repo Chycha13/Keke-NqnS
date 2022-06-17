@@ -6,7 +6,7 @@ $bln_OK = true;
 $tab_message['tab_messageErreur'] = array();
 
 //on verifie les données du formulaire
-if(!empty($_GET['nom_user']){
+if(!empty($_GET['nom_user'])){
     $bln_OK = false;
     $tab_message['tab_messageErreur'][] = "Le nom est manquant.";
 }
@@ -17,10 +17,29 @@ else{
     }
 }
 
+if(!empty($_GET['prenom_user'])){
+    $bln_ok = false;
+    $tab_message['tab_messageErreur'][] = "Le prénom est manquant.";
+}else{
+    if(trim($_GET['prenom_user']) == ''){
+        $bln_OK = false;
+        $tab_message['tab_messageErreur'][] = "Le prénom est vide.";
+    }
+}
+
 /*if(!filter_var($_GET['mail_user'], FILTER_VALIDATE_EMAIL)) { 
     $bln_OK = false;
     $tab_message['tab_messageErreur'][] = "Le mail n'est pas valide.";
 }  
+if(!empty($_GET['adresse_user'])){
+    $bln_ok = false;
+    $tab_message['tab_messageErreur'][] = "L'adresse est manquante.";
+}else{
+    if(trim($_GET['adresse_user']) == ''){
+        $bln_OK = false;
+        $tab_message['tab_messageErreur'][] = "L'adresse est vide.";
+    }
+}
 
  if($_GET['password_user'] != $_GET['confirm_password_user']){
     $bln_OK = false;
@@ -39,6 +58,7 @@ else{
     $nom = htmlspecialchars(($_GET["nom_user"]));
     $prenom  = htmlspecialchars(($_GET["prenom_user"]));
     $mail = htmlspecialchars(($_GET["mail_user"]));
+    $adresse = htmlspecialchars(($_GET["adresse_user"]));
     $mdp = htmlspecialchars(($_GET["password_user"]));
     $confirmeMdp = htmlspecialchars($_GET["confirm_password_user"]);         
     

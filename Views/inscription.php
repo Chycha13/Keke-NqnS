@@ -17,18 +17,22 @@ require_once "../config/bdd.php";
     <script type="text/javascript" src="../js/inscription.js"></script>  
 </head>
 <body>
-    <header class="headerInscription">
-    <div class="placementBtn">           
-            <a href="accueil.php"><button class="">Accueil</button></a>
-            
-            <a href="profil.php"><button class=""></button></a>
-
-            <a href="logout.php"><button class="">Déconnection</button></a>
+    <header class="headerIndex">
+        <div class="Slogan">
+            <p>L'antre des Gamer</p>
+        </div>
+        <div class="navigation">
+            <a href="#"><span> Boutique </span></a>
+            <a href="#"><span> Déconnexion </span></a>
+            <a href="#"><span> Profil </span></a>
+        </div>
+        <div class="panier">
+        <a class="logoPanier" href="#"><img src="../asset/img/caddie.png" alt="" width="120%"></a>
         </div>
     </header>
     <main class="mainInscription">
-        <h1>Création de compte</h1>
-        <form method="POST" action="../index.php" class="FormInscription" id="formInscription" name="formInscription">
+        <h1 class="titreInscription">Création de compte</h1>
+        <form method="POST" action="../index.php" class="FormInscription card" id="formInscription" name="formInscription">
             <table>
                 <tr>
                     <td>
@@ -39,6 +43,11 @@ require_once "../config/bdd.php";
                 <tr>
                     <td>
                         <input type="text" placeholder="Prénom" id="prenom_user" name="prenom_user">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Adresse" id="adresse_user" name="adresse_user">
                     </td>
                 </tr>
                 <tr>
@@ -59,7 +68,7 @@ require_once "../config/bdd.php";
                 </tr>                                
            </table>
 
-           <button>S'inscrire</button> 
+           <button class="btnInscription">S'inscrire</button> 
         </form>
     </main>
     <footer>
