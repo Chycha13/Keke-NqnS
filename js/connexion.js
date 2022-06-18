@@ -11,14 +11,17 @@ function init() {
         url: "../Models/Connexion_action.php?"+$("#formConnexion").serialize(),
         dataType: "json",
         success : function(result){
-          console.log(result);
+          if(!result.bln_OK){
+            tab_message = result.tab_message;
+            bln_OK = result.bln_OK;
+          }
         },
         error : function(result){
           // retour = JSON.parse(result);
           console.log(result);
         }
       });
-      window.location.href ="../index.php"
+      //window.location.href ="../index.php"
     }
 
     bln_OK = false;

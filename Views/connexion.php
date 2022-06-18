@@ -32,7 +32,7 @@ require_once "../config/bdd.php";
     </header>
     <main class="mainInscription">
         <h1 class="titreConnexion">Création de compte</h1>
-        <form method="POST" action="../Models/Connexion.php" id="formConnexion" name="formConnexion" class="FormConnexion card">
+        <form method="POST" id="formConnexion" name="formConnexion" class="FormConnexion card">
             <table>
                 <tr>
                     <td>
@@ -47,7 +47,7 @@ require_once "../config/bdd.php";
                 
             </table>
             <a href="">Mot de passe oublié</a>
-            <button class="btnConnexion" type="Submit">Connexion</button>
+            <button class="btnConnexion">Connexion</button>
            
         </form>
         <div class="card2 card">

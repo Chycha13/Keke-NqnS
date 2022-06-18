@@ -32,7 +32,7 @@ require_once "../config/bdd.php";
     </header>
     <main class="mainInscription">
         <h1 class="titreInscription">Création de compte</h1>
-        <form method="POST" action="../index.php" class="FormInscription card" id="formInscription" name="formInscription">
+        <form method="POST" action="connexion.php" class="FormInscription card" id="formInscription" name="formInscription">
             <table>
                 <tr>
                     <td>

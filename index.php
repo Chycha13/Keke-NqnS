@@ -5,6 +5,9 @@
 //     $insert_name = $_SESSION['prenom_user'];
 // }
 
+//TODO
+//faire requête select table user_session pour vérifier si session active
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
