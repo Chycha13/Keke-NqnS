@@ -22,13 +22,11 @@ require_once "../config/bdd.php";
             <p>L'antre des Gamer</p>
         </div>
         <div class="navigation">
-            <a href="#"><span> Boutique </span></a>
-            <a href="#"><span> Déconnexion </span></a>
+            <a href="#"><span> Boutique </span></a>            
             <a href="#"><span> Profil </span></a>
+            <a href="#"><span> Panier </span></a>
         </div>
-        <div class="panier">
-        <a class="logoPanier" href="#"><img src="../asset/img/caddie.png" alt="" width="120%"></a>
-        </div>
+       
     </header>
     <main class="mainInscription">
         <h1 class="titreConnexion">Création de compte</h1>
@@ -47,7 +45,7 @@ require_once "../config/bdd.php";
                 
             </table>
             <a href="">Mot de passe oublié</a>
-            <button class="btnConnexion">Connexion</button>
+            <button class="btnConnexion" id="bouton_connexion" name="bouton_connexion">Connexion</button>
            
         </form>
         <div class="card2 card">

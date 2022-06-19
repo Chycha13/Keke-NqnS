@@ -4,7 +4,7 @@ function init() {
   $("#password_user").keypress(function(event){
     //TODO faire mieux pour le contrôle
     mdp = $("#password_user").val() + event.originalEvent.key;
-    if(mdp.length < 10 ){
+    if(mdp.length < 5 ){
       $("#libelle_mdp").html("mot de passe trop court.");
     }
     else{
@@ -18,11 +18,37 @@ function init() {
     bln_OK = true;
     tab_message = "";
 
-    //contrôle du nom
-   /* if($("#nom_user").val() == ""){
+    // contrôle du nom
+    if($("#nom_user").val() == ""){
       $("#libelle_nom").html("Le nom ne doit pas être vide");
       bln_OK = false;
-    }*/
+    }
+    //contrôle prénom
+    // if($("#prenom_user").val() == ""){
+    //   $("#libelle_prenom").html("Le prénom ne doit pas être vide");
+    //   bln_OK = false;
+    // }
+    // //contrôle adresse
+    // if($("#adresse_user").val() == ""){
+    //   $("#libelle_adresse").html("L'adresse ne doit pas être vide");
+    //   bln_OK = false;
+    // }
+    // //contrôle du mail
+    // if($("#mail_user").val() == ""){
+    //   $("#libelle_mail").html("L'email ne doit pas être vide");
+    //   bln_OK = false;
+    // }
+    // //contrôle mot de passe
+    // if($("#password_user").val() == ""){
+    //   $("#libelle_mdp").html("Le mot de passe ne doit pas être vide");
+    //   bln_OK = false;
+    // }
+    // //contrôle confirmation mot de passe
+    // if($("#confirm_password_user").val() == ""){
+    //   $("#libelle_confirm").html("Le mot de passe ne doit pas être vide");
+    //   bln_OK = false;
+    // }
+    
 
     //TODO faires les autres contrôles
 
@@ -45,6 +71,15 @@ function init() {
     if(!bln_OK){
       //TODO
       //fair eune modal avec les erreurs sotckés dans 'tab_message'
+    
+      $('#btnInscription').submit(function openModal() {
+        $("#popupErreur").style;
+          setTimeout(function(){
+            popupErreur.style.display = 'block';
+          }); 
+        });
+   
+   
       event.preventDefault();
     }
     else{
@@ -54,4 +89,5 @@ function init() {
    
     //window.history.back();
   });
+ 
 }

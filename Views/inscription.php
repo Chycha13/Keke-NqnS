@@ -22,13 +22,11 @@ require_once "../config/bdd.php";
             <p>L'antre des Gamer</p>
         </div>
         <div class="navigation">
-            <a href="#"><span> Boutique </span></a>
-            <a href="#"><span> Déconnexion </span></a>
-            <a href="#"><span> Profil </span></a>
+            <a href="#"><span> Boutique </span></a> 
+            <a href="./connexion.php"><span> Compte </span></a>
+            <a href="#"><span> Panier </span></a>
         </div>
-        <div class="panier">
-        <a class="logoPanier" href="#"><img src="../asset/img/caddie.png" alt="" width="120%"></a>
-        </div>
+        
     </header>
     <main class="mainInscription">
         <h1 class="titreInscription">Création de compte</h1>
@@ -37,22 +35,25 @@ require_once "../config/bdd.php";
                 <tr>
                     <td>
                         <input type="text" placeholder="Nom" id="nom_user" name="nom_user">
-                        <span id="libelle_nom" name="libelle_nom"></span>
+                       
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <input type="text" placeholder="Prénom" id="prenom_user" name="prenom_user">
+                        <span id="libelle_prenom" name="libelle_prenom"></span>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <input type="text" placeholder="Adresse" id="adresse_user" name="adresse_user">
+                        <span id="libelle_adresse" name="libelle_adresse"></span>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <input type="text" placeholder="Mail" id="mail_user" name="mail_user">
+                        <span id="libelle_mail" name="libelle_mail"></span>
                     </td>
                 </tr>
                 <tr>
@@ -63,16 +64,26 @@ require_once "../config/bdd.php";
                 </tr>
                 <tr>
                     <td>
-                        <input type="password" placeholder="Mot de passe" id="confirm_password_user" name="confirm_password_user">
+                        <input type="password" placeholder="Confirmer mot de passe" id="confirm_password_user" name="confirm_password_user">
+                        <span id="libelle_confirm" name="libelle_confirm"></span>
                     </td>
                 </tr>                                
            </table>
 
-           <button class="btnInscription">S'inscrire</button> 
+           <button class="btnInscription" id="btnInscription" onclick="openModal()">S'inscrire</button> 
         </form>
+        <p class="engagement"> E-gaming s'engage à garder ces informations strictement confidentielles.</p>
+
+        <div id="popupErreur">
+            <div>
+                <span id="libelle_nom" name="libelle_nom"></span>
+            </div>
+            <button type="button" onclick="closeModal()"></button>
+        </div>
     </main>
     <footer>
 
     </footer>
+    
 </body>
 </html>

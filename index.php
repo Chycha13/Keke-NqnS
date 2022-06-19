@@ -1,13 +1,10 @@
 <?php
     require_once "./config/bdd.php";
-// $insert_name = '';
-// if(isset($_SESSION['prenom_user'])){
-//     $insert_name = $_SESSION['prenom_user'];
-// }
 
 //TODO
 //faire requête select table user_session pour vérifier si session active
-
+$recup_session = $bdd->query(RECUPERATION_SESSION);
+$recup_session->fetch();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,13 +24,18 @@
         <div class="Slogan">
             <p>L'antre des Gamer</p>
         </div>
-        <div class="panier">
-            <a class="logoPanier" href="#"><img src="./asset/img/caddie.png" alt="PANIER" width="120%"></a>
-        </div>
+      
         <div class="navigation">
-            <a href="#"><span> Boutique </span></a>
+            <a href="#"><span> Boutique </span></a>          
+            <a href="./Views/connexion.php"><span> Compte </span></a>
+            <a href="#"><span> Panier </span></a>
+    <?php
+        if(!empty($_SESSION['id_session'])){
+    ?>
             <a id="bouton_deconnexion" name="bouton_deconnexion"><span> Déconnexion </span></a>
-            <a href="#"><span> Compte </span></a>
+    <?php
+        }
+    ?>
         </div>
        
     </header>

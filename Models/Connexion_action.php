@@ -4,8 +4,9 @@ require_once "../bibliotheque/constante_bdd.php";
 
 $bln_OK = true;
 $tab_message['tab_messageErreur'] = array();
+
 //data
-$data = false;
+$data = true;
 
 //on vérifie les données du formulaire
 
@@ -32,27 +33,27 @@ if(empty($_GET['password_user'])){
 if($bln_OK){
             $mail = htmlspecialchars($_GET['mail_user']);
             $mdp = htmlspecialchars($_GET['password_user']);
+            // $id = htmlspecialchars($_GET['id_user']);
 
-    
-        // if(!empty($mail) && !empty($mdp)) {
+            $select = $bdd->prepare(INSERTION_CONNEXION);
+        if( $select->execute([$mail]) !=1){
 
-      // prepare SQL request from mail of user
-
-        $select = $bdd->prepare(INSERTION_CONNEXION);
-    if( $select->execute([$mail]) !=1){
-        $bln_OK = false;
-        $tab_message['tab_messageErreur'][] = "une erreure c'est produite lors de la requête dans la base de données";        
-    }   
-    else{
-        $data = $select->fetch();
-    }
+            $bln_OK = false;
+            $tab_message['tab_messageErreur'][] = "une erreure c'est produite lors de la requête dans la base de données";        
+        }   
+        else{
+            $data = $select->fetch();
+        }
         // Use password verify for creating session
             if($data){
-                    if(password_verify($mdp, $data['password_user'])){
-                        session_start();
+                if(password_verify($mdp, $data['password_user'])){
+                    session_start();
                         //TODO
-                        //création ligne dnas table user_session
+                        //création ligne dans table user_session
                         //id_user, id_session, date_create
+                   
+                    $insert = $bdd->prepare(INSERTION_SESSION);
+                    $insert->execute(array($_GET['id_user']));
 
                         //$_SESSION['role'] = $data['role'];
                         //$_SESSION['prenom_user'] = $data['prenom_user'];
@@ -64,9 +65,8 @@ if($bln_OK){
                           //  }else if ($data['role'] === "user"){                          
                                 //header("Location: ../index.php");
                            // }
-                    }
-            }   
-        
+                }
+            }          
 }       
 
 $tab_retourJson = array();

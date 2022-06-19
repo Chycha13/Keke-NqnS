@@ -21,16 +21,20 @@ function init() {
           console.log(result);
         }
       });
-      //window.location.href ="../index.php"
+      //
     }
 
     bln_OK = false;
 
     if(!bln_OK){
       event.preventDefault();
+      // window.location.href ="../index.php"
     }
     //window.history.back();     
   });
+  // $("bouton_connexion").click(function(){
+  //   window.location.href = "../index.php"
+  // });
 
   $("#bouton_inscription").click(function(){
    window.location.href = "inscription.php";
