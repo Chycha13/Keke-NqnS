@@ -41,42 +41,38 @@ require_once "../config/bdd.php";
                 <tr>
                     <td>
                         <input type="text" placeholder="Prénom" id="prenom_user" name="prenom_user">
-                        <span id="libelle_prenom" name="libelle_prenom"></span>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <input type="text" placeholder="Adresse" id="adresse_user" name="adresse_user">
-                        <span id="libelle_adresse" name="libelle_adresse"></span>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <input type="text" placeholder="Mail" id="mail_user" name="mail_user">
-                        <span id="libelle_mail" name="libelle_mail"></span>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <input type="password" placeholder="Mot de passe" id="password_user" name="password_user">
-                        <span id="libelle_mdp" name="libelle_mdp"></span>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <input type="password" placeholder="Confirmer mot de passe" id="confirm_password_user" name="confirm_password_user">
-                        <span id="libelle_confirm" name="libelle_confirm"></span>
                     </td>
                 </tr>                                
            </table>
 
-           <button class="btnInscription" id="btnInscription" onclick="openModal()">S'inscrire</button> 
+           <button class="btnInscription" id="btnInscription">S'inscrire</button> 
         </form>
         <p class="engagement"> E-gaming s'engage à garder ces informations strictement confidentielles.</p>
 
-        <div id="popupErreur">
-            <div>
-                <span id="libelle_nom" name="libelle_nom"></span>
+        <div id="popupErreur" class="modalErreur">
+            <div class="modal-content">
+                <span id="close_modal" class="close_modal">&times;</span>
+                <span id="libelle_erreur" name="libelle_erreur"></span>
             </div>
             <button type="button" onclick="closeModal()"></button>
         </div>
